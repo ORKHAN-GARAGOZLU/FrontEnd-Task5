@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cosmos{
+    background-image: url(./images/background-3901037_1280.png);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.cosmos .solar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cosmos .sun{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color:#ee8100;
+    box-shadow: 0 0 40px #d27d1c;
+    z-index: 1;
+}
+.mercury,
+.venus,
+.earth,
+.mars,
+.yupiter,
+.saturn,
+.uran,
+.neptun{
+    position: absolute;
+    border-radius: 50%;
+    animation: 3s cubic-bezier(0.5, 1.9, 0.7, 0.2) forwards;
+    font: bold 20px monospace;
+    color: white;
+
+}
+
+/* Mercury */
+
+.mercury{
+    width: 35px;
+    height: 35px;
+    background-color:#c1be97;
+    box-shadow: 0 0 40px #c1be97;
+    animation-name: Mercury;
+}
+.mercury::before{
+    content: "Mercury";
+    position: absolute;
+    top: 50px;
+    left: -20px;
+}
+
+@keyframes Mercury{
+
+    100%{
+        transform: translateX(150px);
+    }
+}
+
+/* Venus */
+
+.venus{
+    width: 40px;
+    height: 40px;
+    background-color:#c05e41;
+    box-shadow: 0 0 40px #c05e41;
+    animation-name: Venus;
+}
+.venus::before{
+    content: "Venus";
+    position: absolute;
+    top: 50px;
+    left: -8px;
+}
+
+@keyframes Venus{
+
+    100%{
+        transform:translateX(-50px) translateY(180px);
+    }
+}
+
+/* Earth */
+
+.earth{
+    width: 41px;
+    height: 41px;
+    background-color:#2f9eb6;
+    box-shadow: 0 0 40px #2f9eb6;
+    animation-name: Earth;
+}
+.earth::before{
+    content: "Earth";
+    position: absolute;
+    top: 50px;
+    left: -7px;
+}
+
+@keyframes Earth{
+
+    100% {
+      transform: translateX(-160px) translateY(-160px);
+    }
+}
+
+/* Mars */
+
+.mars{
+    width: 38px;
+    height: 38px;
+    background-color:#b64931;
+    box-shadow: 0 0 40px #b64931;
+    animation-name: Mars;
+}
+.mars::before{
+    content: "Mars";
+    position: absolute;
+    top: 50px;
+    left: -3px;
+}
+
+@keyframes Mars{
+
+    100% {
+      transform: translateX(-280px) translateY(-20px);
+    }
+}
+
+/* Yupiter */
+
+.yupiter{
+    width: 80px;
+    height: 80px;
+    background-color:#d27d1c;
+    box-shadow: 0 0 40px #d27d1c;
+    animation-name: Yupiter;
+}
+.yupiter::before{
+    content: "Yupiter";
+    position: absolute;
+    top: 100px;
+    left: 2px;
+}
+
+@keyframes Yupiter{
+
+    100% {
+      transform: translateX(300px) translateY(-100px);
+    }
+}
+
+/* Saturn */
+
+.saturn{
+    width: 70px;
+    height: 70px;
+    background-color:#e7b552;
+    box-shadow: 0 0 40px #e7b552;
+    animation-name: Saturn;
+    transform-style: preserve-3d;
+}
+.saturn::before{
+    content: "Saturn";
+    position: absolute;
+    top: 90px;
+    left: 3px;
+}
+.saturn .ring {
+    width: 179px;
+    height: 208px;
+    border: solid 35px #b8b08d;
+    border-radius: 50%;
+    top: -67px;
+    left: -54px;
+    position: absolute;
+    transform: rotate3d(1, 0, 0, 75deg); 
+}
+
+@keyframes Saturn{
+
+    100% {
+      transform: translateX(40px) translateY(-300px);
+    }
+}
+
+/* Uran */
+
+.uran{
+    width: 60px;
+    height: 60px;
+    background-color: #26c7c4;
+    box-shadow: 0 0 40px #26c7c4;
+    animation-name: Uran;
+}
+.uran::before{
+    content: "Uran";
+    position: absolute;
+    top: 80px;
+    left: 8px;
+}
+
+@keyframes Uran{
+
+    100% {
+      transform: translateX(-300px) translateY(230px);
+    }
+}
+
+/* Neptun */
+
+.neptun{
+    width: 57px;
+    height: 57px;
+    background-color: #33807e;
+    box-shadow: 0 0 40px #33807e;
+    animation-name: Neptun;
+}
+.neptun::before{
+    content: "Neptun";
+    position: absolute;
+    top: 70px;
+    left: -2px;
+}
+
+@keyframes Neptun{
+
+    100% {
+      transform: translateX(300px) translateY(260px);
+    }
+}
+
+
+
+
+
+
+

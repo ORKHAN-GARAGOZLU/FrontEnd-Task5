@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.road{
+    background-image: url(./images/3042.jpg);
+    background-size: cover;
+    height: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Traffic-light ------------------------------------------*/
+
+
+.road .traffic img{
+    bottom: 0;
+    width: 150px;
+    position: absolute;
+    right: 0;
+}
+[class*="light"]{
+    position: absolute;
+    right: 58px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.road .traffic .red-light{
+    bottom: 280px;
+    background-color: darkred;
+    animation: red-light 7s linear ;
+    animation-delay: 9s;
+
+}
+.road .traffic .yellow-light{
+    bottom: 240px;
+    background-color: rgb(125, 85, 35);
+    animation: yellow-light 3s linear ;
+    animation-delay: 6s;
+}
+.road .traffic .green-light{
+    bottom: 201px;
+    background-color: rgb(34, 40, 33);
+    animation: green-light 25s linear;
+}
+
+@keyframes green-light{
+    0%{
+        background-color: green;
+        box-shadow: 0 0 80px green;
+    }
+    10%{
+        background-color: rgb(34, 40, 33);
+
+    }
+    15%{
+        background-color: green;
+        box-shadow: 0 0 60px green;
+    }
+    20%{
+        background-color: rgb(34, 40, 33);
+    }
+    40%{
+        background-color: rgb(34, 40, 33);
+
+        animation-delay: 11s;
+    }
+    60%{
+        background-color: rgb(34, 40, 33);
+
+        animation-delay: 11s;
+    }
+    65%{
+        background-color: green;
+        box-shadow: 0 0 60px green;
+    }
+    100%{
+        background-color: green;
+        box-shadow: 0 0 60px green;
+    }
+}
+
+@keyframes yellow-light{
+    
+    100%{
+        background-color: yellow;
+        box-shadow: 0 0 60px yellow;
+    }
+}
+
+@keyframes red-light{
+    0%{
+        background-color: red;
+        box-shadow: 0 0 60px red;
+    }
+    50%{
+        background-color: red;
+        box-shadow: 0 0 60px red;
+    }
+    60%{
+        background-color: darkred;
+
+    }
+    70%{
+        background-color: red;
+        box-shadow: 0 0 60px red;
+    }
+    80%{
+        background-color: darkred;
+    }
+    90%{
+        background-color: red;
+        box-shadow: 0 0 0px red;
+    }
+    100%{
+        background-color: red;
+        box-shadow: 0 0 60px red;
+    }
+    
+}
+
+
+/* Yellow-car ------------------------------------------*/
+
+
+.road .car{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    animation: Car 25s linear;
+}
+.road .car img{
+    width: 236px;
+}
+.road .car-inroad .car img:nth-child(2){
+    width: 76px;
+    position: absolute;
+    left: 22px;
+    bottom: -11px;
+}
+.road .car-inroad .car img:nth-child(3){
+    width: 76px;
+    position: absolute;
+    left: 142px;
+    bottom: -11px;
+}
+.car img:nth-child(2),
+.car img:nth-child(3){
+    animation: car-whell 2s linear infinite;
+}
+
+@keyframes Car{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(1100px);
+        animation-delay: 7s;
+    }
+    75%{
+        transform: translateX(1100px);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes car-whell{
+    
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Police-car ------------------------------------------*/
+
+
+.road .police-car{
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+    animation: Police 5s linear forwards;
+}
+.road .police-car img{
+    width: 300px;
+}
+.road .car-inroad .police-car img:nth-child(2){
+    width: 76px;
+    position: absolute;
+    left: 37px;
+    bottom: 24px;
+}
+.road .car-inroad .police-car img:nth-child(3){
+    width: 76px;
+    position: absolute;
+    left: 191px;
+    bottom: 23px;
+}
+
+
+/* Blue-car ------------------------------------------*/
+
+
+.road .blue-car{
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    left: 400px;
+    animation: Police 5s linear forwards;
+}
+.road .blue-car img{
+    width: 290px;
+}
+.road .car-inroad .blue-car img:nth-child(2){
+    width: 76px;
+    position: absolute;
+    left: 16px;
+    bottom: 5px;
+}
+.road .car-inroad .blue-car img:nth-child(3){
+    width: 76px;
+    position: absolute;
+    left: 198px;
+    bottom: 4px;
+}
+
+/* blue-police ----------------------------------*/
+
+.police-car img:nth-child(2),
+.police-car img:nth-child(3),
+.blue-car img:nth-child(2),
+.blue-car img:nth-child(3){
+    animation: speed-whell 1s linear infinite;
+}
+
+@keyframes speed-whell{
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes Police {
+    
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+    
+}
